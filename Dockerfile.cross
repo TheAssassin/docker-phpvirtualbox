@@ -6,7 +6,7 @@ __CROSS_COPY qemu-__QEMU_ARCH__-static /usr/bin
 RUN apk update && apk upgrade
 RUN apk --no-cache --update add bash tzdata nginx php84-fpm php84-cli php84-common php84-json php84-soap php84-simplexml php84-session \
     && apk --no-cache --update add --virtual build-dependencies wget unzip \
-    && wget --no-check-certificate https://github.com/phpvirtualbox/phpvirtualbox/archive/master.zip -O phpvirtualbox.zip \
+    && wget --no-check-certificate https://github.com/phpvirtualbox/phpvirtualbox/archive/develop.zip -O phpvirtualbox.zip \
     && unzip phpvirtualbox.zip -d phpvirtualbox \
     && mkdir -p /var/www \
     && mv -v phpvirtualbox/*/* /var/www/ \
